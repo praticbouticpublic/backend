@@ -1,0 +1,199 @@
+Signature-Version: 1.0
+SHA1-Digest-Manifest: 0GJaN4FWGS3326NrlvSHiXTty9k=
+Created-By: 1.6.0 (IBM Corporation)
+SHA1-Digest-Manifest-Main-Attributes: LdBWPJLSj6t6cnWiIU0JIubIeSY=
+
+Name: org/eclipse/core/internal/boot/PlatformURLHandler.class
+SHA1-Digest: KLPl4Sf1HSu9OnabGL3edW9nfa4=
+
+Name: org/eclipse/core/runtime/IProgressMonitor.class
+SHA1-Digest: ZTz0ij/y5+4QIXUYpMhrCqsIluk=
+
+Name: org/eclipse/core/runtime/IBundleGroupProvider.class
+SHA1-Digest: RxbWiyf6uq1O4jD/oRpBsR8ebGg=
+
+Name: org/eclipse/core/runtime/PluginVersionIdentifier.class
+SHA1-Digest: gpbXxBcicrS1DzGYUDidLCXjnLs=
+
+Name: org/eclipse/core/runtime/Assert.class
+SHA1-Digest: OICh2A8keAzdnwacpbnSzyIiFL0=
+
+Name: org/eclipse/core/runtime/IPath.class
+SHA1-Digest: bR1er6MkytrRAXBrgaCmvcnhHq8=
+
+Name: org/eclipse/core/internal/runtime/PlatformURLFragmentConnection.
+ class
+SHA1-Digest: D6XQtPf54VYttgzAGzAS/AkSgtY=
+
+Name: org/eclipse/core/runtime/SubProgressMonitor.class
+SHA1-Digest: ByAOmQ+kFIDTtxKmvDpDPpe50ao=
+
+Name: org/eclipse/core/runtime/OperationCanceledException.class
+SHA1-Digest: 8ZrdtQ1EFS4tFbkT9BPFNuaB9A8=
+
+Name: org/eclipse/core/internal/runtime/CommonMessages.class
+SHA1-Digest: nMkLK+wmW/Tx1r4VvARNZHmhMsM=
+
+Name: org/eclipse/core/internal/runtime/DataArea.class
+SHA1-Digest: biTFOBXEYci339WfHA5ZEDXRWJY=
+
+Name: org/eclipse/core/internal/runtime/ReferenceHashSet$StrongReferen
+ ce.class
+SHA1-Digest: lfWB7crT5QEuUIw6nuduNPi8LrM=
+
+Name: org/eclipse/core/runtime/SubMonitor$RootInfo.class
+SHA1-Digest: 5BrgMJURbYTUTLwxDg8YcLqCXcE=
+
+Name: org/eclipse/core/runtime/IAdaptable.class
+SHA1-Digest: aAQRsMKkD4XIyidsM7hue/DmEek=
+
+Name: org/eclipse/core/runtime/SafeRunner.class
+SHA1-Digest: AJmd7zPlXahcqVgErDaxTLgIos4=
+
+Name: org/eclipse/core/runtime/MultiStatus.class
+SHA1-Digest: aNQpektKvW38IfTjbxYdNaxdzrs=
+
+Name: org/eclipse/core/runtime/Path.class
+SHA1-Digest: Sp8ZbvxHWSW4JLwU7ZfucnHitSo=
+
+Name: org/eclipse/core/runtime/ProgressMonitorWrapper.class
+SHA1-Digest: Ykkx7OXyNnbR5ZGFDUwiBcFhPsI=
+
+Name: META-INF/eclipse.inf
+SHA1-Digest: SAqY+5ITAL0mkdYeijlSRhyIaZk=
+
+Name: org/eclipse/core/internal/boot/PlatformURLBaseConnection.class
+SHA1-Digest: 4b52rQ75auM2l3NC7K+BSRWvQ1A=
+
+Name: org/eclipse/core/runtime/ListenerList.class
+SHA1-Digest: nSMV6l5oHZ+DN7t6aewpTnwa4HE=
+
+Name: org/eclipse/core/runtime/Status.class
+SHA1-Digest: fxNOTO85byENLAbjLCM84PCXDho=
+
+Name: org/eclipse/core/runtime/IBundleGroup.class
+SHA1-Digest: KYGW0nDkNlHTNZ3GaoQR8Heszlg=
+
+Name: org/eclipse/core/internal/runtime/PrintStackUtil.class
+SHA1-Digest: FHbfKeaqbTa3RsR+u2ssWfUYYiI=
+
+Name: org/eclipse/core/internal/runtime/IAdapterFactoryExt.class
+SHA1-Digest: +CFVZnXrf7aCpeTiNVoYwQ7JAA4=
+
+Name: org/eclipse/core/internal/runtime/LocalizationUtils.class
+SHA1-Digest: pXc+pdhPloVaemYo0SSwsEwt+DM=
+
+Name: org/eclipse/core/runtime/SubMonitor.class
+SHA1-Digest: JZRsNzP2JORdvQw2AsQT205rFSw=
+
+Name: org/eclipse/core/internal/runtime/ReferenceHashSet$HashedReferen
+ ce.class
+SHA1-Digest: QQlPBfd3GyUvzS3pB4sYssujD7A=
+
+Name: org/eclipse/core/runtime/NullProgressMonitor.class
+SHA1-Digest: 9ngcerNrOoSmt5vyNT9H3vpFDyM=
+
+Name: org/eclipse/core/internal/boot/PlatformURLConnection.class
+SHA1-Digest: eEwOnV5Qy6A8xIXy6vE6Ezc4fng=
+
+Name: org/eclipse/core/internal/runtime/PlatformURLMetaConnection.clas
+ s
+SHA1-Digest: fxAmoR06CZa7Or/l16Q4WBBF9aw=
+
+Name: org/eclipse/core/runtime/IAdapterManager.class
+SHA1-Digest: 9bT1rL/bScbAQeGqMGnyNw04xZE=
+
+Name: org/eclipse/core/internal/runtime/ResourceTranslator.class
+SHA1-Digest: Ojox4tt6tuKBxUWr6qM7po3VYso=
+
+Name: org/eclipse/core/internal/runtime/RuntimeLog.class
+SHA1-Digest: /gbF4750BfuRevTaQ1RenGguO1E=
+
+Name: org/eclipse/core/internal/runtime/ReferenceHashSet$HashableWeakR
+ eference.class
+SHA1-Digest: 7tqUoYB6GmBjD9zc5vJlarfunb0=
+
+Name: org/eclipse/core/runtime/CoreException.class
+SHA1-Digest: wYc7jT2BJMMVxeFY8bKxq4DGk8c=
+
+Name: plugin.properties
+SHA1-Digest: UWy0+tpS4NmqfQQ/XqgLTXqnAjU=
+
+Name: org/eclipse/core/runtime/PlatformObject.class
+SHA1-Digest: 9y+yp8DPbRHE/W9LE0AixJ2BF/s=
+
+Name: org/eclipse/core/runtime/FileLocator.class
+SHA1-Digest: V5KNb7Si6/0OkZiZ9xRPmzZea+I=
+
+Name: org/eclipse/core/runtime/IStatus.class
+SHA1-Digest: 9723j88upJcu+Ka7EN/zDi2XCDw=
+
+Name: org/eclipse/core/internal/runtime/ReferenceHashSet$HashableSoftR
+ eference.class
+SHA1-Digest: TppHXsKeGa68GYfmj5eBh6q+Rgs=
+
+Name: org/eclipse/core/internal/runtime/AdapterManager.class
+SHA1-Digest: yUphlgBa+jvlJtPgB6zvA8ZGmt8=
+
+Name: org/eclipse/core/internal/runtime/IAdapterManagerProvider.class
+SHA1-Digest: 3QVwfzHGLicJHBJ/2U5iSElRofw=
+
+Name: org/eclipse/core/internal/runtime/MetaDataKeeper.class
+SHA1-Digest: gTBSErDbuC/Qm6qyj9EkxjY221Q=
+
+Name: org/eclipse/core/runtime/IAdapterFactory.class
+SHA1-Digest: NBR1lMUWQt/KSdgKTzVJjsIZJTk=
+
+Name: org/eclipse/core/runtime/QualifiedName.class
+SHA1-Digest: 3N7Osmf+nBTZ1TgNORpes4psLoE=
+
+Name: org/eclipse/core/internal/runtime/commonMessages.properties
+SHA1-Digest: ymTa7XfyjqT8abaZLNSnu/W1osc=
+
+Name: org/eclipse/core/internal/runtime/ReferenceHashSet.class
+SHA1-Digest: 7/zLzxHbufkbCv50LB0UuXMtVHg=
+
+Name: org/eclipse/core/runtime/URIUtil.class
+SHA1-Digest: plkWlisogvW7D7O0y+Q+wHHyDLM=
+
+Name: org/eclipse/core/runtime/ISafeRunnable.class
+SHA1-Digest: ZYFxtazjhzgJNRYTq9l/5msSsew=
+
+Name: .api_description
+SHA1-Digest: vsjus5Vh1AHLwF6AYAJRMTq3JQw=
+
+Name: org/eclipse/core/internal/runtime/PlatformURLPluginConnection.cl
+ ass
+SHA1-Digest: RP/W3hoCh7KYUcRVPksWbqMC4Y0=
+
+Name: org/eclipse/core/internal/runtime/DevClassPathHelper.class
+SHA1-Digest: DHbcbjuP3RUg94NnXSTi2bte2ok=
+
+Name: about.html
+SHA1-Digest: M+fykt9heyWoEv1LNiIEeBhi/2Q=
+
+Name: org/eclipse/core/runtime/ILogListener.class
+SHA1-Digest: S+5GrQuCVpKMJnACrQ37potOAYo=
+
+Name: org/eclipse/core/runtime/AssertionFailedException.class
+SHA1-Digest: HFxAigV25Zg7vdGn2Ok6KhfcYjA=
+
+Name: org/eclipse/core/internal/runtime/Activator.class
+SHA1-Digest: u9SOPKiA0mTx2NU/o7RFotJaR9s=
+
+Name: org/eclipse/core/internal/runtime/FindSupport.class
+SHA1-Digest: Nu7C0/x3+A1E1vxyg5DLffRekD4=
+
+Name: org/eclipse/core/internal/runtime/PlatformURLConfigConnection.cl
+ ass
+SHA1-Digest: A9TFoEIlZMgbSXU4hmFXdOl7i24=
+
+Name: org/eclipse/core/internal/runtime/PlatformURLConverter.class
+SHA1-Digest: mWzb/GKfnDS+xZtSbNoh5L5Jq7E=
+
+Name: org/eclipse/core/runtime/IProgressMonitorWithBlocking.class
+SHA1-Digest: OpUnquT89m30u+SUR2Jks+g+MfE=
+
+Name: org/eclipse/core/internal/runtime/IRuntimeConstants.class
+SHA1-Digest: qHqEiUkhCv4KcVxeUHE0yB9Faes=
+
