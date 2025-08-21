@@ -1,0 +1,74 @@
+name: DEV  Praticboutic backend Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '21'  # adapte si besoin
+
+    - name: Connexion SSH et déploiement
+      uses: appleboy/ssh-action@v1.2.2
+      with:
+        host: ${{ secrets.FTP_JAVABACKENDSERVER }}
+        username: ${{ secrets.FTP_JAVABACKENDUSERNAME }}
+        key: ${{ secrets.FTP_JAVABACKENDSSH_KEY }}
+        port: 22
+        script: |
+          # 🛑 Étape 1 : tuer tout processus Java écoutant sur le port 8446
+          PID=$(lsof -i :8081 -sTCP:LISTEN -t) && if [ -n "$PID" ]; then
+          echo "Processus Java trouvé sur le port 8446 (PID: $PID), arrêt en cours..."
+          kill "$PID"
+          sleep 2
+          if ps -p "$PID" > /dev/null; then
+            echo "Forçage du processus (kill -9)..."
+            kill -9 "$PID"
+          fi
+          else
+            echo "Aucun processus Java sur le port 8081."
+          fi
+          shopt -s extglob dotglob
+          rm -rf /var/www/vhosts/praticboutic.fr/backdev.praticboutic.fr/springboot/
+
+          # git pull origin main  # ou "master" selon ta branche
+          git clone git@github.com:praticboutic/praticboutic-backend.git /var/www/vhosts/praticboutic.fr/backdev.praticboutic.fr/springboot/
+          
+          cd /var/www/vhosts/praticboutic.fr/backdev.praticboutic.fr/springboot/src/main/resources/
+          cp application-dev.properties application.properties
+
+          cd /var/www/vhosts/praticboutic.fr/
+          chown -R qruser:psaserv backdev.praticboutic.fr/
+          chmod -R 777 backdev.praticboutic.fr/
+
+          cd /var/www/vhosts/praticboutic.fr/backdev.praticboutic.fr/springboot/
+          # Stop l'app, nettoie, build avec le profil dev
+          sudo -u qruser mvn clean install -Dmaven.test.skip=true -Dspring-boot.run.profiles=dev
+
+          # Trouve le fichier JAR
+          JAR_FILE=$(find /var/www/vhosts/praticboutic.fr/backdev.praticboutic.fr/springboot/target -name 'praticboutic-backend-springboot-*.jar' ! -name '*.original' | head -n 1)
+
+          PID=$(lsof -i :8081 -sTCP:LISTEN -t)
+          if [ -n "$PID" ]; then
+            echo "Arrêt du processus Java sur le port 8081 (PID: $PID)"
+            kill "$PID" || kill -9 "$PID"
+          fi
+          
+          # Démarre la nouvelle version en arrière-plan
+          sudo -u qruser nohup java -jar "$JAR_FILE" --spring.profiles.active=dev > /var/www/vhosts/praticboutic.fr/backdev.praticboutic.fr/springboot/log.out 2>&1 &
+          chown qruser:psaserv log.out
+
+        
+            
+
+
