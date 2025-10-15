@@ -1,0 +1,3 @@
+<Files *.php>
+SetHandler default-handler
+</Files>
