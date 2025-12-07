@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Fermeture automatique</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        .btn {
+            display: none;
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #0a84ff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+        }
+        .btn:hover {
+            background-color: #006be6;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <p>Cette fenêtre va se fermer automatiquement...</p>
+    <button class="btn" id="closeButton" onclick="closeWindow()">Fermer manuellement</button>
+</div>
+
+<script>
+    function closeWindow() {
+        window.close();
+    }
+
+    window.onload = function() {
+        // Essaye de fermer automatiquement après 500ms
+        setTimeout(() => {
+            window.close();
+            // Si la fenêtre n'est pas fermée, afficher le bouton
+            const closeBtn = document.getElementById('closeButton');
+            if (closeBtn) closeBtn.style.display = 'inline-block';
+        }, 500);
+    };
+</script>
+</body>
+</html>

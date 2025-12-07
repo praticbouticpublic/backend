@@ -1,0 +1,17 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "relation": ["delegate_permission/common.get_login_creds"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "io.praticboutic.merchant",
+    "sha256_cert_fingerprints":
+    ["0D:B1:C0:D8:EF:69:F2:49:FD:6F:02:33:4C:C5:1F:0D:31:51:15:44:3B:B3:31:9C:D6:CD:03:0B:48:8F:8B:F4"]
+  }
+},
+{
+  "relation": ["delegate_permission/common.get_login_creds"],
+  "target": {
+    "namespace": "web",
+    "site": "https://devj.praticboutic.fr"
+  }
+}]

@@ -1,0 +1,882 @@
+{
+  "tables": [
+    {
+      "nom": "categorie",
+      "desc": "Catégories",
+      "cs": "nom",
+      "sstable": "n",
+      "champs": [
+        {
+          "nom": "catid",
+          "desc": "Identifiant",
+          "typ": "pk",
+          "defval": "",
+          "vis": "n",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "nom",
+          "desc": "Nom",
+          "typ": "ref",
+          "defval": "",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "visible",
+          "desc": "Actif",
+          "typ": "bool",
+          "defval": "1",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        }
+      ]
+    },
+    {
+      "nom": "article",
+      "desc": "Articles",
+      "cs": "nom",
+      "sstable": "o",
+      "champs": [
+        {
+          "nom": "artid",
+          "desc": "Identifiant",
+          "typ": "pk",
+          "defval": "",
+          "vis": "n",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "nom",
+          "desc": "Nom",
+          "typ": "ref",
+          "defval": "",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "prix",
+          "desc": "Prix",
+          "typ": "prix",
+          "defval": "0.00",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "description",
+          "desc": "Description",
+          "typ": "text",
+          "defval": "",
+          "vis": "n",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "visible",
+          "desc": "Actif",
+          "typ": "bool",
+          "defval": "1",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "catid",
+          "desc": "Catégorie",
+          "typ": "fk",
+          "defval": "",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "unite",
+          "desc": "Unité",
+          "typ": "text",
+          "defval": "€",
+          "ordre": "0",
+          "sens": ""
+        }
+      ]
+    },
+    {
+      "nom": "relgrpoptart",
+      "desc": "Relations groupes d'option-articles",
+      "cs": "",
+      "sstable": "n",
+      "champs": [
+        {
+          "nom": "relgrpoartid",
+          "desc": "Identifiant",
+          "typ": "pk",
+          "defval": "",
+          "vis": "n",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "grpoptid",
+          "desc": "Groupe d'option",
+          "typ": "fk",
+          "defval": "",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "artid",
+          "defval": "",
+          "desc": "",
+          "typ": "fk",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "visible",
+          "desc": "Actif",
+          "typ": "bool",
+          "defval": "1",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        }
+      ]
+    },
+    {
+      "nom": "groupeopt",
+      "desc": "Groupes d'option",
+      "cs": "nom",
+      "sstable": "o",
+      "champs": [
+        {
+          "nom": "grpoptid",
+          "desc": "Identifiant",
+          "typ": "pk",
+          "defval": "",
+          "vis": "n",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "nom",
+          "desc": "Nom",
+          "typ": "ref",
+          "defval": "",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "visible",
+          "desc": "Actif",
+          "typ": "bool",
+          "defval": "1",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "multiple",
+          "desc": "Choix Multiple",
+          "typ": "bool",
+          "defval": "0",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        }
+      ]
+    },
+    {
+      "nom": "option",
+      "desc": "Options",
+      "cs": "nom",
+      "sstable": "n",
+      "champs": [
+        {
+          "nom": "optid",
+          "desc": "Identifiant",
+          "typ": "pk",
+          "defval": "",
+          "vis": "n",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "nom",
+          "desc": "Nom",
+          "typ": "ref",
+          "defval": "",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "surcout",
+          "desc": "Surcoût",
+          "typ": "prix",
+          "defval": "0.00",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "grpoptid",
+          "desc": "Groupe d'option",
+          "typ": "fk",
+          "defval": "",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "visible",
+          "desc": "Actif",
+          "typ": "bool",
+          "defval": "1",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        }
+      ]
+    },
+    {
+      "nom": "parametre",
+      "desc": "Paramètres",
+      "cs": "nom",
+      "sstable": "n",
+      "champs": [
+        {
+          "nom": "paramid",
+          "desc": "Identifiant",
+          "typ": "pk",
+          "defval": "",
+          "vis": "n",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "nom",
+          "desc": "Nom",
+          "typ": "ref",
+          "defval": "",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "valeur",
+          "desc": "Valeur",
+          "typ": "text",
+          "defval": "",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "commentaire",
+          "desc": "Commentaire",
+          "typ": "text",
+          "defval": "",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        }
+      ]
+    },
+    {
+      "nom": "cpzone",
+      "desc": "Zones de livraison",
+      "cs": "codepostal",
+      "sstable": "n",
+      "champs": [
+        {
+          "nom": "cpzoneid",
+          "desc": "Identifiant",
+          "typ": "pk",
+          "defval": "",
+          "vis": "n",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "codepostal",
+          "desc": "Code Postal",
+          "defval": "",
+          "typ": "codepostal",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "ville",
+          "desc": "Ville",
+          "defval": "",
+          "typ": "text",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "actif",
+          "desc": "Actif",
+          "typ": "bool",
+          "defval": "1",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        }
+      ]
+    },
+    {
+      "nom": "barlivr",
+      "desc": "Barêmes de livraison",
+      "cs": "",
+      "sstable": "n",
+      "champs": [
+        {
+          "nom": "barlivrid",
+          "desc": "Identifiant",
+          "typ": "pk",
+          "defval": "",
+          "vis": "n",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "valminin",
+          "desc": "Fourchette Basse (Incl.)",
+          "typ": "prix",
+          "defval": "0.00",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "valmaxex",
+          "desc": "Fourchette Haute (Excl.)",
+          "typ": "prix",
+          "defval": "0.00",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "surcout",
+          "desc": "Surcoût",
+          "typ": "prix",
+          "defval": "0.00",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "actif",
+          "desc": "Active",
+          "typ": "bool",
+          "defval": "1",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        }
+      ]
+    },
+    {
+      "nom": "commande",
+      "desc": "Commandes Clients",
+      "cs": "numref",
+      "sstable": "n",
+      "champs": [
+        {
+          "nom": "cmdid",
+          "desc": "identifiant",
+          "typ": "pk",
+          "defval": "",
+          "vis": "n",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "numref",
+          "desc": "Référence",
+          "typ": "ref",
+          "defval": "",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "nom",
+          "desc": "Nom",
+          "typ": "text",
+          "defval": "",
+          "vis": "n",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "prenom",
+          "desc": "Prénom",
+          "typ": "text",
+          "defval": "",
+          "vis": "n",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "telephone",
+          "desc": "Téléphone",
+          "typ": "text",
+          "defval": "",
+          "vis": "n",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "adresse1",
+          "desc": "Ligne d'adresse n°1",
+          "typ": "text",
+          "defval": "",
+          "vis": "n",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "adresse2",
+          "desc": "Ligne d'adresse n°2",
+          "typ": "text",
+          "defval": "",
+          "vis": "n",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "codepostal",
+          "desc": "Code Postal",
+          "typ": "text",
+          "defval": "",
+          "vis": "n",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "ville",
+          "desc": "Ville",
+          "typ": "text",
+          "defval": "",
+          "vis": "n",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "vente",
+          "desc": "Type de Vente",
+          "typ": "text",
+          "defval": "",
+          "vis": "n",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "paiement",
+          "desc": "Mode de Paiement",
+          "typ": "text",
+          "defval": "",
+          "vis": "n",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "sstotal",
+          "desc": "Sous-total",
+          "typ": "prix",
+          "defval": "0.00",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "remise",
+          "desc": "Remise",
+          "typ": "prix",
+          "defval": "0",
+          "vis": "n",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "fraislivraison",
+          "desc": "Frais de Livraison",
+          "typ": "prix",
+          "defval": "0.00",
+          "vis": "n",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "total",
+          "desc": "Total",
+          "typ": "prix",
+          "defval": "0.00",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "commentaire",
+          "desc": "Commentaire",
+          "typ": "text",
+          "defval": "",
+          "vis": "n",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "method",
+          "desc": "Méthode de vente",
+          "typ": "text",
+          "defval": "",
+          "vis": "n",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "table",
+          "desc": "N° de la Table",
+          "typ": "text",
+          "defval": "",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "datecreation",
+          "desc": "Date de Création",
+          "typ": "date",
+          "defval": "",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "statid",
+          "desc": "Statut",
+          "typ": "fk",
+          "defval": "",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        }
+      ]
+    },
+    {
+      "nom": "lignecmd",
+      "desc": "Lignes de commande",
+      "cs": "",
+      "sstable": "n",
+      "champs": [
+        {
+          "nom": "lignecmdid",
+          "desc": "Identifiant",
+          "typ": "pk",
+          "vis": "n",
+          "defval": "",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "cmdid",
+          "desc": "Commande",
+          "typ": "fk",
+          "defval": "",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "ordre",
+          "desc": "Ordre",
+          "typ": "text",
+          "defval": "",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "type",
+          "desc": "Type de Produit",
+          "typ": "text",
+          "defval": "",
+          "vis": "n",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "nom",
+          "desc": "Intitulé",
+          "typ": "text",
+          "defval": "",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "prix",
+          "desc": "Prix",
+          "typ": "prix",
+          "defval": "0.00",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "quantite",
+          "desc": "Quantité",
+          "typ": "text",
+          "defval": "0",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "commentaire",
+          "desc": "Commentaire",
+          "typ": "text",
+          "defval": "",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        }
+      ]
+    },
+    {
+      "nom": "statutcmd",
+      "desc": "Statuts de commande",
+      "cs": "etat",
+      "sstable": "n",
+      "champs": [
+        {
+          "nom": "statid",
+          "desc": "Identifiant",
+          "typ": "pk",
+          "defval": "",
+          "vis": "n",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "etat",
+          "desc": "Etat de la commande",
+          "typ": "text",
+          "defval": "",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "couleur",
+          "desc": "Couleur du status",
+          "typ": "couleur",
+          "defval": "",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "message",
+          "desc": "SMS à Envoyer",
+          "typ": "text",
+          "defval": "",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "defaut",
+          "desc": "Defaut",
+          "typ": "bool",
+          "defval": "0",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "actif",
+          "desc": "Actif",
+          "typ": "bool",
+          "defval": "1",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        }
+      ]
+    },
+    {
+      "nom": "promotion",
+      "desc": "Promotions",
+      "cs": "taux",
+      "sstable": "n",
+      "champs": [
+        {
+          "nom": "promoid",
+          "desc": "Identifiant",
+          "typ": "pk",
+          "defval": "",
+          "vis": "n",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "code",
+          "desc": "Code",
+          "typ": "codepromo",
+          "defval": "",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "taux",
+          "desc": "Taux",
+          "typ": "percent",
+          "defval": "0",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "actif",
+          "desc": "Actif",
+          "typ": "bool",
+          "defval": "1",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        }
+      ]
+    },
+    {
+      "nom": "artlistimg",
+      "desc": "Liste d'images d'article'",
+      "cs": "image",
+      "sstable": "n",
+      "champs": [
+        {
+          "nom": "artlistimgid",
+          "desc": "Identifiant",
+          "typ": "pk",
+          "defval": "",
+          "vis": "n",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "artid",
+          "defval": "",
+          "desc": "",
+          "typ": "fk",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "image",
+          "desc": "Fichier Image",
+          "typ": "image",
+          "defval": "",
+          "vis": "n",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "favori",
+          "desc": "Par défaut",
+          "typ": "bool",
+          "defval": "1",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        },
+        {
+          "nom": "visible",
+          "desc": "Visible",
+          "typ": "bool",
+          "defval": "1",
+          "vis": "o",
+          "ordre": "0",
+          "sens": ""
+        }
+      ]
+    }
+  ],
+  "liens": [
+    {
+      "nom": "categorie",
+      "desc": "Catégorie de l'article",
+      "srctbl": "article",
+      "srcfld": "catid",
+      "dsttbl": "categorie",
+      "dstfld": "catid",
+      "join": "ij"
+    },
+    {
+      "nom": "groupeopt",
+      "desc": "Groupe d'option relié",
+      "srctbl": "relgrpoptart",
+      "srcfld": "grpoptid",
+      "dsttbl": "groupeopt",
+      "dstfld": "grpoptid",
+      "join": "ij"
+    },
+    {
+      "nom": "article",
+      "desc": "Article relié",
+      "srctbl": "relgrpoptart",
+      "srcfld": "artid",
+      "dsttbl": "article",
+      "dstfld": "artid",
+      "join": "ij"
+    },
+    {
+      "nom": "groupeopt",
+      "desc": "Groupe de l'option",
+      "srctbl": "option",
+      "srcfld": "grpoptid",
+      "dsttbl": "groupeopt",
+      "dstfld": "grpoptid",
+      "join": "ij"
+    },
+    {
+      "nom": "commande",
+      "desc": "Commande reliée",
+      "srctbl": "lignecmd",
+      "srcfld": "cmdid",
+      "dsttbl": "commande",
+      "dstfld": "cmdid",
+      "join": "ij"
+    },
+    {
+      "nom": "statut",
+      "desc": "Statut de la commande",
+      "srctbl": "commande",
+      "srcfld": "statid",
+      "dsttbl": "statutcmd",
+      "dstfld": "statid",
+      "join": "ij"
+    },
+    {
+      "nom": "image",
+      "desc": "Images de l'article'",
+      "srctbl": "artlistimg",
+      "srcfld": "artid",
+      "dsttbl": "article",
+      "dstfld": "artid",
+      "join": "ij"
+    }
+  ]
+}
